@@ -2,21 +2,41 @@
   <h2>Funcionários</h2>
 
   <form class="row g-2 mb-3" (ngSubmit)="buscar()">
-    <div class="col-md-3">
-      <input class="form-control" placeholder="Nome" [(ngModel)]="filtros.nome" name="nome">
-    </div>
-    <div class="col-md-3">
-      <input class="form-control" placeholder="CPF" [(ngModel)]="filtros.cpf" name="cpf">
-    </div>
-    <div class="col-md-3">
-      <input class="form-control" placeholder="Email" [(ngModel)]="filtros.email" name="email">
-    </div>
-    <div class="col-md-3">
-      <button class="btn btn-primary w-100" type="submit">Buscar</button>
-    </div>
-  </form>
+  <div class="col-md-3">
+    <small class="form-text text-muted">Nome</small>
+    <input class="form-control" placeholder="Nome" [(ngModel)]="filtros.nome" name="nome">
+  </div>
+  <div class="col-md-3">
+    <small class="form-text text-muted">CPF</small>
+    <input class="form-control" placeholder="CPF" [(ngModel)]="filtros.cpf" name="cpf">
+  </div>
+  <div class="col-md-3">
+    <small class="form-text text-muted">Email</small>
+    <input class="form-control" placeholder="Email" [(ngModel)]="filtros.email" name="email">
+  </div>
+  <div class="col-md-3">
+    <small class="form-text text-muted">Funcional</small>
+    <input class="form-control" placeholder="Funcional" [(ngModel)]="filtros.funcional" name="funcional">
+  </div>
+  <div class="col-md-3">
+    <small class="form-text text-muted">Telefone</small>
+    <input class="form-control" placeholder="Telefone" [(ngModel)]="filtros.telefone" name="telefone">
+  </div>
+  <div class="col-md-3">
+    <small class="form-text text-muted">Data Nasc. Início</small>
+    <input class="form-control" type="date" [(ngModel)]="filtros.dataNascimentoInicio" name="dataNascimentoInicio">
+  </div>
+  <div class="col-md-3">
+    <small class="form-text text-muted">Data Nasc. Fim</small>
+    <input class="form-control" type="date" [(ngModel)]="filtros.dataNascimentoFim" name="dataNascimentoFim">
+  </div>
+  <div class="col-md-3 d-flex align-items-end">
+    <button class="btn btn-primary w-100" type="submit">Buscar</button>
+  </div>
+</form>
 
-  <table class="table table-bordered table-striped">
+
+  <table class="table table-bordered table-hover table-striped">
     <thead class="table-light">
       <tr>
         <th>Funcional</th>

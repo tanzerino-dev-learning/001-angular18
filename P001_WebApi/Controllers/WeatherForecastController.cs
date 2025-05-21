@@ -62,10 +62,16 @@ namespace P001_WebApi.Controllers
 
             // Paginação
             var total = funcionarios.Count;
-            var totalPages = (int)Math.Ceiling((double)total / pageSize);
+            //var totalPages = (int)Math.Ceiling((double)total / pageSize);
+            var totalPages = Math.Max(1, (int)Math.Ceiling((double)total / pageSize));
 
-            if (page < 1 || page > totalPages)
+            //if (page < 1 || page > totalPages)
+            //    return BadRequest($"Página inválida. Total de páginas: {totalPages}");
+
+            if (page < 1 || (total > 0 && page > totalPages))
+            {
                 return BadRequest($"Página inválida. Total de páginas: {totalPages}");
+            }
 
             var resultadosPaginados = funcionarios
                 .Skip((page - 1) * pageSize)

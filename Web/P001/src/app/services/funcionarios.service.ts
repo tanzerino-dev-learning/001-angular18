@@ -1,5 +1,5 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Funcionario } from '../models/funcionario.model';
 
@@ -10,25 +10,13 @@ export class FuncionariosService {
   constructor(private http: HttpClient) {}
 
   listar(params: any): Observable<any> {
-    let query = new HttpParams();
-    for (let key in params) {
-      if (params[key] != null && params[key] !== '') {
-        query = query.set(key, params[key]);
+    let queryParams = new HttpParams();
+    for (const key in params) {
+      if (params[key]) {
+        queryParams = queryParams.set(key, params[key]);
       }
     }
 
-    return this.http.get<any>(this.apiUrl, { params: query });
+    return this.http.get<any>(this.apiUrl, { params: queryParams });
   }
 }
-
-
-/*import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class FuncionariosService {
-
-  constructor() { }
-}
-*/
