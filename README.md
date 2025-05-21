@@ -2,4 +2,5 @@
 
 Foco: Estudos em angular v18. Listagem de dados com filtros.
 
-Api: P001_WebApi. Front Angular: 
+Api: P001_WebApi. 
+Front Angular: Web/P001/.
