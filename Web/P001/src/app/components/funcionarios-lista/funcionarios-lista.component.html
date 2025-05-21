@@ -1,0 +1,57 @@
+<div class="container mt-4">
+  <h2>Funcionários</h2>
+
+  <form class="row g-2 mb-3" (ngSubmit)="buscar()">
+    <div class="col-md-3">
+      <input class="form-control" placeholder="Nome" [(ngModel)]="filtros.nome" name="nome">
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" placeholder="CPF" [(ngModel)]="filtros.cpf" name="cpf">
+    </div>
+    <div class="col-md-3">
+      <input class="form-control" placeholder="Email" [(ngModel)]="filtros.email" name="email">
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-primary w-100" type="submit">Buscar</button>
+    </div>
+  </form>
+
+  <table class="table table-bordered table-striped">
+    <thead class="table-light">
+      <tr>
+        <th>Funcional</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Data Nasc.</th>
+        <th>Nacionalidade</th>
+        <th>Telefone</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let f of funcionarios">
+        <td>{{ f.funcional }}</td>
+        <td>{{ f.nome }}</td>
+        <td>{{ f.cpf }}</td>
+        <td>{{ f.dataNascimento | date: 'dd/MM/yyyy' }}</td>
+        <td>{{ f.nacionalidade }}</td>
+        <td>{{ f.telefone }}</td>
+        <td>{{ f.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <nav>
+    <ul class="pagination">
+      <li class="page-item" [class.disabled]="paginaAtual === 1">
+        <button class="page-link" (click)="mudarPagina(paginaAtual - 1)">Anterior</button>
+      </li>
+      <li class="page-item disabled">
+        <span class="page-link">Página {{ paginaAtual }} de {{ totalPaginas }}</span>
+      </li>
+      <li class="page-item" [class.disabled]="paginaAtual === totalPaginas">
+        <button class="page-link" (click)="mudarPagina(paginaAtual + 1)">Próxima</button>
+      </li>
+    </ul>
+  </nav>
+</div>
