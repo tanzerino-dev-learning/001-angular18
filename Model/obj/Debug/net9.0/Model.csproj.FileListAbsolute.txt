@@ -1,0 +1,12 @@
+C:\projects\001-angular18\Model\bin\Debug\net9.0\Model.deps.json
+C:\projects\001-angular18\Model\bin\Debug\net9.0\Model.dll
+C:\projects\001-angular18\Model\bin\Debug\net9.0\Model.pdb
+C:\projects\001-angular18\Model\obj\Debug\net9.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\001-angular18\Model\obj\Debug\net9.0\Model.AssemblyInfoInputs.cache
+C:\projects\001-angular18\Model\obj\Debug\net9.0\Model.AssemblyInfo.cs
+C:\projects\001-angular18\Model\obj\Debug\net9.0\Model.csproj.CoreCompileInputs.cache
+C:\projects\001-angular18\Model\obj\Debug\net9.0\Model.sourcelink.json
+C:\projects\001-angular18\Model\obj\Debug\net9.0\Model.dll
+C:\projects\001-angular18\Model\obj\Debug\net9.0\refint\Model.dll
+C:\projects\001-angular18\Model\obj\Debug\net9.0\Model.pdb
+C:\projects\001-angular18\Model\obj\Debug\net9.0\ref\Model.dll
